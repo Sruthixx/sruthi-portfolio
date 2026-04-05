@@ -36,15 +36,15 @@ nav a:hover{
 
 /* ===== HERO SECTION ===== */
 .hero{
-  height:90vh;
+  height:80vh;
   background:
   linear-gradient(rgba(14,26,36,0.88),rgba(14,26,36,0.88)),
   url("webbg.jpg") center/cover no-repeat;
   display:flex;
   justify-content:center;
-  align-items:flex-start;   /* changed from center */
+  align-items:center;   /* changed */
   text-align:center;
-  padding-top:140px;        /* pushes content down slightly from top */
+  padding-top:60px;     /* reduced */
 }
 
 .hero h2{
@@ -348,4 +348,82 @@ h2{
   margin:4px 0 0;
   color:#F5F7FA;
   font-size:16px;
+}
+/* ===== MOBILE NAVBAR ===== */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  color:white;
+  cursor:pointer;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media(max-width:768px){
+
+  header{
+    padding:20px;
+    flex-direction:row;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  nav{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#0E1A24;
+    display:none;
+    flex-direction:column;
+    text-align:center;
+    padding:20px 0;
+    border-top:1px solid #1F3A4A;
+  }
+
+  nav a{
+    margin:12px 0;
+    display:block;
+    font-size:16px;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  /* HERO */
+  .hero{
+    height:auto;
+    padding:120px 20px 60px;
+  }
+
+  .hero h2{
+    font-size:28px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  /* PORTFOLIO */
+  .portfolio{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  /* FLOW */
+  .flowchart{
+    flex-direction:column;
+  }
+
+  .arrow{
+    transform:rotate(90deg);
+  }
+
+  /* ABOUT */
+  .about-container{
+    flex-direction:column;
+  }
+
 }

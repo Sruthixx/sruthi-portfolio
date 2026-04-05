@@ -10,7 +10,11 @@
 
 <header>
   <h1>Nexora Studio</h1>
-  <nav>
+
+  <!-- MENU BUTTON -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <nav id="nav-links">
     <a href="#work">Sample Websites</a>
     <a href="#services">Services</a>
     <a href="#pricing">Pricing</a>
@@ -230,5 +234,13 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({duration:1000});</script>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+</script>
 </body>
 </html>
