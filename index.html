@@ -46,7 +46,12 @@
 <h2>Sample Websites</h2>
 <div class="portfolio">
 
-  <div class="p-card" data-aos="zoom-in"><img src="dental.jpg"><span>Dental Clinic</span></div>
+  <div class="p-card" data-aos="zoom-in">
+  <a href="dental.html">
+    <img src="dental.jpg">
+    <span>Dental Clinic</span>
+  </a>
+</div>
   <div class="p-card" data-aos="zoom-in"><img src="salon.jpg"><span>Beauty Salon</span></div>
   <div class="p-card" data-aos="zoom-in"><img src="clinic.jpg"><span>Medical Clinic</span></div>
   <div class="p-card" data-aos="zoom-in"><img src="ca.jpg"><span>CA Firm</span></div>
@@ -235,12 +240,37 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({duration:1000});</script>
 <script>
-const toggle = document.getElementById("menu-toggle");
-const nav = document.getElementById("nav-links");
+  AOS.init();
 
-toggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
+  function openDental() {
+    document.getElementById("dentalPopup").style.display = "flex";
+  }
+
+  function closeDental() {
+    document.getElementById("dentalPopup").style.display = "none";
+  }
 </script>
+<div id="dentalPopup" class="popup">
+
+  <div class="popup-content">
+
+    <span class="close" onclick="closeDental()">×</span>
+
+    <h2>Dental Clinic Websites</h2>
+
+    <div class="inner-card">
+      <img src="dental.jpg">
+
+      <h3>Varsid Dental Clinic</h3>
+
+      <p>Premium dental website with modern UI, booking system and trust-focused design.</p>
+
+      <a href="dental.html">
+        View Website →
+      </a>
+    </div>
+
+  </div>
+</div>
 </body>
 </html>

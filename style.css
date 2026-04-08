@@ -427,3 +427,53 @@ h2{
   }
 
 }
+/* POPUP STYLE */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #0f172a;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 400px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.inner-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.inner-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4A90E2;
+  text-decoration: none;
+  font-weight: bold;
+}
+.p-card a {
+  text-decoration: none;
+  color: white;
+}
+
+.p-card a span {
+  color: white;
+}
