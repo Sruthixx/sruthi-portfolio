@@ -61,7 +61,11 @@ nav a:hover{
 
 /* ===== SECTIONS ===== */
 section{
-  padding:100px 10%;
+  padding:100px 0;
+}
+
+#work{
+  text-align:center;
 }
 
 h2{
@@ -82,12 +86,14 @@ h2{
 
 /* ===== PORTFOLIO ===== */
 .portfolio{
-  display:grid;
-  grid-template-columns:repeat(3, 230px);
-  justify-content:center;
-  gap:70px 130px;
-}
+  display: grid;
+  grid-template-columns: repeat(3, 260px);
+  justify-content: center;
+  gap: 50px;
 
+  width: max-content;   /* ⭐ THIS FIXES CENTER */
+  margin: 0 auto;       /* ⭐ PERFECT CENTER */
+}
 .p-card{
   background:#132633;              /* Surface navy */
   border-radius:14px;
@@ -408,10 +414,12 @@ h2{
 
   /* PORTFOLIO */
   .portfolio{
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap:40px;
+  max-width:1000px;
+  margin:0 auto;   /* THIS CENTERS */
+}
   /* FLOW */
   .flowchart{
     flex-direction:column;
@@ -476,4 +484,15 @@ h2{
 
 .p-card a span {
   color: white;
+}
+@media (max-width: 900px){
+  .portfolio{
+    grid-template-columns: repeat(2, 260px);
+  }
+}
+
+@media (max-width: 600px){
+  .portfolio{
+    grid-template-columns: repeat(1, 260px);
+  }
 }
